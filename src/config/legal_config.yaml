@@ -1,0 +1,59 @@
+# Legal HiRAG Configuration 
+databases:  
+  neo4j:  
+    uri: "${NEO4J_URI}"
+    user: "${NEO4J_USER}"  
+    password: "${NEO4J_PASSWORD}"  
+    
+  postgres:  
+    host: "${POSTGRES_HOST}"
+    port: 5432  
+    database: "${POSTGRES_DB}"
+    user: "${POSTGRES_USER}"
+    password: "${POSTGRES_PASSWORD}" 
+    
+  chromadb:  
+    # host: "${CHROMA_HOST}" 
+    # port: 8000  
+    persist_directory: "${CHROMA_PERSIST_DIRECTORY}" 
+  
+llm:  
+  openai:  
+    api_key: "${OPENAI_API_KEY}"  
+    base_url: "https://api.openai.com/v1"  
+    model: "gpt-4o"  
+    embedding_model: "text-embedding-3-large"  
+    embedding_dim: 3072  
+    max_token_size: 8192  
+    
+  gemini:  
+    api_key: "${GEMINI_API_KEY}"  
+    model: "${LITELLM_MODEL}"  
+    embedding_model: "${EMBEDDING_MODEL}"  
+    embedding_dim: 768  
+  
+legal_processing:  
+  chunk_strategy: "legal_structure"  
+  max_chunk_tokens: 1024  
+  enable_cross_reference: true  
+  enable_precedence_analysis: true  
+  hierarchy_levels:  # Cập nhật để bao gồm Mục  
+    - "phan"  
+    - "chuong"  
+    - "muc"      # Thêm level Mục  
+    - "dieu"  
+    - "khoan"  
+  entity_types:  
+    - "legal_concept"  
+    - "legal_principle"  
+    - "legal_entity"  
+    - "legal_procedure"  
+    - "legal_provision"  
+  
+hirag:  
+  working_dir: "./data/knowledge_base"  
+  enable_llm_cache: true  
+  enable_hierarchical_mode: true  
+  embedding_batch_num: 6  
+  embedding_func_max_async: 8  
+  enable_naive_rag: true

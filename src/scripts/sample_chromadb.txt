@@ -1,0 +1,57 @@
+# ChromaDB Collection Schema for Legal Entities  
+{
+    "collection_name": "legal_entities",
+    "metadata": {
+        "description": "Legal entity embeddings for semantic search",
+        "embedding_model": "text-embedding-3-large",
+        "dimension": 3072
+    },
+    "documents": [
+        {
+            "id": "ent-ca_nhan",
+            "document": "Cá nhân Chủ thể có năng lực pháp lý dân sự",
+            "metadata": {
+                "entity_name": "Cá nhân",
+                "entity_type": "legal_entity",
+                "level": "dieu",
+                "source_id": "dieu-3",
+                "document_id": "bo_luat_dan_su",
+                "confidence_score": 0.95,
+                "hierarchy_path": [
+                    "chuong-2",
+                    "dieu-3"
+                ]
+            }
+        }
+    ]
+}  
+  
+# ChromaDB Collection Schema for Legal Provisions  
+{
+    "collection_name": "legal_provisions",
+    "metadata": {
+        "description": "Legal provision embeddings for hierarchical search",
+        "embedding_model": "text-embedding-3-large",
+        "dimension": 3072
+    },
+    "documents": [
+        {
+            "id": "dieu-1",
+            "document": "Điều 1. Phạm vi điều chỉnh Bộ luật này quy định...",
+            "metadata": {
+                "level": "dieu",
+                "number": "1",
+                "title": "Phạm vi điều chỉnh",
+                "document_id": "bo_luat_dan_su",
+                "hierarchy_path": [
+                    "chuong-1",
+                    "dieu-1"
+                ],
+                "cross_references": [
+                    "dieu-2",
+                    "dieu-4"
+                ]
+            }
+        }
+    ]
+}

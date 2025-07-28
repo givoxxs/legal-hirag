@@ -1,0 +1,10 @@
+# Connect to PostgreSQL  
+psql -U postgres -h localhost  
+  
+# Create database and user  
+CREATE DATABASE legal_hirag;  
+CREATE USER legal_user WITH PASSWORD 'legal_password';  
+GRANT ALL PRIVILEGES ON DATABASE legal_hirag TO legal_user;  
+  
+# Run schema creation  
+psql -U legal_user -d legal_hirag -f scripts/create_tables.sql

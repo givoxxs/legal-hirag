@@ -1,0 +1,54 @@
+# Community Report Generation Prompts for Legal Domain  
+  
+community_reports:  
+  system_prompt: |  
+    Bạn là chuyên gia phân tích pháp luật Việt Nam. Nhiệm vụ của bạn là tạo báo cáo tổng hợp   
+    cho một nhóm các thực thể pháp lý có liên quan.  
+  
+  report_generation_prompt: |  
+    Dựa trên danh sách các thực thể pháp lý và mối quan hệ sau, hãy tạo một báo cáo tổng hợp   
+    theo định dạng JSON:  
+  
+    Thực thể: {entities}  
+    Mối quan hệ: {relationships}  
+  
+    Định dạng JSON yêu cầu:  
+    {{  
+        "title": "Tiêu đề ngắn gọn cho nhóm thực thể này",  
+        "summary": "Tóm tắt tổng quan về nhóm thực thể",  
+        "rating": 5.0,  
+        "rating_explanation": "Giải thích về mức độ quan trọng (1-5)",  
+        "findings": [  
+            {{  
+                "summary": "Phát hiện chính 1",  
+                "explanation": "Giải thích chi tiết về phát hiện này"  
+            }},  
+            {{  
+                "summary": "Phát hiện chính 2",   
+                "explanation": "Giải thích chi tiết về phát hiện này"  
+            }}  
+        ]  
+    }}  
+  
+    Yêu cầu:  
+    - Tập trung vào các khái niệm pháp lý quan trọng  
+    - Phân tích mối quan hệ giữa các thực thể  
+    - Đánh giá tác động và ý nghĩa pháp lý  
+    - Sử dụng thuật ngữ pháp lý chính xác  
+  
+  markdown_conversion_template: |  
+    # {title}  
+  
+    {summary}  
+  
+    **Mức độ quan trọng:** {rating}/5.0  
+    *{rating_explanation}*  
+  
+    ## Các phát hiện chính  
+  
+    {findings_content}  
+  
+  findings_template: |  
+    ### {summary}  
+  
+    {explanation}
