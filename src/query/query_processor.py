@@ -1,3 +1,4 @@
+import asyncio
 import time
 from typing import Dict, List, Any, Optional
 from ..models.query_models import LegalQueryParam, LegalQueryResult, LegalQueryMode
@@ -5,6 +6,7 @@ from ..storage.storage_manager import LegalStorageManager
 from .context_builder import LegalContextBuilder
 from ..utils.config import load_config
 from litellm import completion
+from pprint import pprint
 
 
 class LegalQueryProcessor:
@@ -48,13 +50,32 @@ class LegalQueryProcessor:
             # Build context based on query mode
             context = await self._build_query_context(query, params)
 
+            print("Context:")
+            pprint(context)
+
             # Generate response using LLM
             response = await self._generate_response(query, context, params)
 
             # Extract metadata from context
             entities_retrieved = context.get("entities", [])
-            provisions_referenced = context.get("provisions", [])
+
+            provisions_data = context.get("provisions", [])
+            provisions_referenced = []
+            for provision in provisions_data:
+                if isinstance(provision, dict):
+                    # Use provision ID if available, otherwise use title
+                    provision_ref = provision.get("id") or provision.get(
+                        "title", "Unknown provision"
+                    )
+                    provisions_referenced.append(provision_ref)
+                elif isinstance(provision, str):
+                    provisions_referenced.append(provision)
+
+            # provisions_referenced = context.get("provisions", [])
             cross_references = context.get("cross_references", [])
+            # Ensure cross_references are strings
+            if cross_references and isinstance(cross_references[0], dict):
+                cross_references = [ref.get("id", str(ref)) for ref in cross_references]
 
             processing_time = time.time() - start_time
 
@@ -165,18 +186,29 @@ class LegalQueryProcessor:
 
     async def _call_llm(self, query: str, system_prompt: str) -> str:
         """Call LLM API - implement based on your chosen LLM"""
-        try:
-            response = completion(
-                model="gemini/gemini-2.0-flash",
-                messages=[
-                    {"role": "system", "content": system_prompt},
-                    {"role": "user", "content": query},
-                ],
-                api_key=self.llm_config.get("gemini").get("api_key"),
-            )
-            return response.choices[0].message.content
-        except Exception as e:
-            return f"Lỗi LiteLLM: {str(e)}"
+        retries = 3
+        last_error = None
+
+        while retries > 0:
+            try:
+                response = completion(
+                    model="gemini/gemini-2.0-flash",
+                    messages=[
+                        {"role": "system", "content": system_prompt},
+                        {"role": "user", "content": query},
+                    ],
+                    api_key=self.llm_config.get("gemini").get("api_key"),
+                    max_tokens=1000,
+                )
+                return response.choices[0].message.content
+
+            except Exception as e:
+                last_error = e
+                retries -= 1
+                if retries > 0:
+                    await asyncio.sleep(1)  # Chờ 1 giây trước khi thử lại
+
+        return f"Lỗi LiteLLM sau 3 lần thử: {str(last_error)}"
 
     def _extract_sources(self, context: Dict[str, Any]) -> List[Dict[str, str]]:
         """Extract source information from context"""

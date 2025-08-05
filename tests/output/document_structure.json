@@ -1,0 +1,130 @@
+{
+  "id": "bo_luat_dan_su_2015",
+  "title": "﻿BỘ LUẬT DÂN SỰ 2015",
+  "document_type": "legal_code",
+  "provisions_count": 291,
+  "sample_provisions": [
+    {
+      "id": "phan-THỨ NHẤT",
+      "level": "phan",
+      "number": "THỨ NHẤT",
+      "title": "QUY ĐỊNH CHUNG",
+      "hierarchy_path": [
+        "phan-THỨ NHẤT"
+      ],
+      "content_preview": "PHẦN THỨ NHẤT: QUY ĐỊNH CHUNG"
+    },
+    {
+      "id": "chuong-I",
+      "level": "chuong",
+      "number": "I",
+      "title": "NHỮNG QUY ĐỊNH CHUNG",
+      "hierarchy_path": [
+        "phan-THỨ NHẤT",
+        "chuong-I"
+      ],
+      "content_preview": "CHƯƠNG I: NHỮNG QUY ĐỊNH CHUNG"
+    },
+    {
+      "id": "dieu-1",
+      "level": "dieu",
+      "number": "1",
+      "title": "Phạm vi điều chỉnh",
+      "hierarchy_path": [
+        "phan-THỨ NHẤT",
+        "chuong-I",
+        "dieu-1"
+      ],
+      "content_preview": "Điều 1. Phạm vi điều chỉnh\nBộ luật này quy định địa vị pháp lý, chuẩn mực pháp lý về cách ứng xử của cá nhân, pháp nhân; quyền, nghĩa vụ về nhân thân và tài sản của cá nhân, pháp nhân trong các quan h"
+    },
+    {
+      "id": "dieu-2",
+      "level": "dieu",
+      "number": "2",
+      "title": "Công nhận, tôn trọng, bảo vệ và bảo đảm quyền dân sự",
+      "hierarchy_path": [
+        "phan-THỨ NHẤT",
+        "chuong-I",
+        "dieu-2"
+      ],
+      "content_preview": "Điều 2. Công nhận, tôn trọng, bảo vệ và bảo đảm quyền dân sự"
+    },
+    {
+      "id": "khoan-1",
+      "level": "khoan",
+      "number": "1",
+      "title": "Ở nước Cộng hòa xã hội chủ nghĩa Việt Nam, các quyền dân sự được công nhận, tôn trọng, bảo vệ và bảo đảm theo Hiến pháp và pháp luật.",
+      "hierarchy_path": [
+        "phan-THỨ NHẤT",
+        "chuong-I",
+        "dieu-2",
+        "khoan-1"
+      ],
+      "content_preview": "1. Ở nước Cộng hòa xã hội chủ nghĩa Việt Nam, các quyền dân sự được công nhận, tôn trọng, bảo vệ và bảo đảm theo Hiến pháp và pháp luật."
+    },
+    {
+      "id": "khoan-2",
+      "level": "khoan",
+      "number": "2",
+      "title": "Quyền dân sự chỉ có thể bị hạn chế theo quy định của luật trong trường hợp cần thiết vì lý do quốc phòng, an ninh quốc gia, trật tự, an toàn xã hội, đạo đức xã hội, sức khỏe của cộng đồng.",
+      "hierarchy_path": [
+        "phan-THỨ NHẤT",
+        "chuong-I",
+        "dieu-2",
+        "khoan-2"
+      ],
+      "content_preview": "2. Quyền dân sự chỉ có thể bị hạn chế theo quy định của luật trong trường hợp cần thiết vì lý do quốc phòng, an ninh quốc gia, trật tự, an toàn xã hội, đạo đức xã hội, sức khỏe của cộng đồng."
+    },
+    {
+      "id": "dieu-3",
+      "level": "dieu",
+      "number": "3",
+      "title": "Các nguyên tắc cơ bản của pháp luật dân sự",
+      "hierarchy_path": [
+        "phan-THỨ NHẤT",
+        "chuong-I",
+        "dieu-3"
+      ],
+      "content_preview": "Điều 3. Các nguyên tắc cơ bản của pháp luật dân sự"
+    },
+    {
+      "id": "khoan-1",
+      "level": "khoan",
+      "number": "1",
+      "title": "Mọi cá nhân, pháp nhân đều bình đẳng, không được lấy bất kỳ lý do nào để phân biệt đối xử; được pháp luật bảo hộ như nhau về các quyền nhân thân và tài sản.",
+      "hierarchy_path": [
+        "phan-THỨ NHẤT",
+        "chuong-I",
+        "dieu-3",
+        "khoan-1"
+      ],
+      "content_preview": "1. Mọi cá nhân, pháp nhân đều bình đẳng, không được lấy bất kỳ lý do nào để phân biệt đối xử; được pháp luật bảo hộ như nhau về các quyền nhân thân và tài sản."
+    },
+    {
+      "id": "khoan-2",
+      "level": "khoan",
+      "number": "2",
+      "title": "Cá nhân, pháp nhân xác lập, thực hiện, chấm dứt quyền, nghĩa vụ dân sự của mình trên cơ sở tự do, tự nguyện cam kết, thỏa thuận. Mọi cam kết, thỏa thuận không vi phạm điều cấm của luật, không trái đạo đức xã hội có hiệu lực thực hiện đối với các bên và phải được chủ thể khác tôn trọng.",
+      "hierarchy_path": [
+        "phan-THỨ NHẤT",
+        "chuong-I",
+        "dieu-3",
+        "khoan-2"
+      ],
+      "content_preview": "2. Cá nhân, pháp nhân xác lập, thực hiện, chấm dứt quyền, nghĩa vụ dân sự của mình trên cơ sở tự do, tự nguyện cam kết, thỏa thuận. Mọi cam kết, thỏa thuận không vi phạm điều cấm của luật, không trái "
+    },
+    {
+      "id": "khoan-3",
+      "level": "khoan",
+      "number": "3",
+      "title": "Cá nhân, pháp nhân phải xác lập, thực hiện, chấm dứt quyền, nghĩa vụ dân sự của mình một cách thiện chí, trung thực.",
+      "hierarchy_path": [
+        "phan-THỨ NHẤT",
+        "chuong-I",
+        "dieu-3",
+        "khoan-3"
+      ],
+      "content_preview": "3. Cá nhân, pháp nhân phải xác lập, thực hiện, chấm dứt quyền, nghĩa vụ dân sự của mình một cách thiện chí, trung thực."
+    }
+  ]
+}

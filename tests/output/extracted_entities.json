@@ -1,0 +1,106 @@
+[
+  {
+    "name": "Khái niệm_phan_THỨ NHẤT",
+    "type": "legal_concept",
+    "level": "phan",
+    "source_id": "phan-THỨ NHẤT",
+    "confidence_score": 0.8,
+    "description": "Khái niệm pháp lý từ phan THỨ NHẤT"
+  },
+  {
+    "name": "Khái niệm_chuong_I",
+    "type": "legal_concept",
+    "level": "chuong",
+    "source_id": "chuong-I",
+    "confidence_score": 0.9,
+    "description": "Khái niệm pháp lý từ chuong I"
+  },
+  {
+    "name": "Khái niệm_dieu_1",
+    "type": "legal_concept",
+    "level": "dieu",
+    "source_id": "dieu-1",
+    "confidence_score": 1.0,
+    "description": "Khái niệm pháp lý từ dieu 1"
+  },
+  {
+    "name": "Thủ_tục_1",
+    "type": "legal_procedure",
+    "level": "dieu",
+    "source_id": "dieu-1",
+    "confidence_score": 0.7999999999999999,
+    "description": "Thủ tục pháp lý từ Điều 1"
+  },
+  {
+    "name": "Khái niệm_dieu_2",
+    "type": "legal_concept",
+    "level": "dieu",
+    "source_id": "dieu-2",
+    "confidence_score": 0.8,
+    "description": "Khái niệm pháp lý từ dieu 2"
+  },
+  {
+    "name": "Thủ_tục_2",
+    "type": "legal_procedure",
+    "level": "dieu",
+    "source_id": "dieu-2",
+    "confidence_score": 0.85,
+    "description": "Thủ tục pháp lý từ Điều 2"
+  },
+  {
+    "name": "Khái niệm_khoan_1",
+    "type": "legal_concept",
+    "level": "khoan",
+    "source_id": "khoan-1",
+    "confidence_score": 0.9,
+    "description": "Khái niệm pháp lý từ khoan 1"
+  },
+  {
+    "name": "Khái niệm_khoan_2",
+    "type": "legal_concept",
+    "level": "khoan",
+    "source_id": "khoan-2",
+    "confidence_score": 1.0,
+    "description": "Khái niệm pháp lý từ khoan 2"
+  },
+  {
+    "name": "Khái niệm_dieu_3",
+    "type": "legal_concept",
+    "level": "dieu",
+    "source_id": "dieu-3",
+    "confidence_score": 0.8,
+    "description": "Khái niệm pháp lý từ dieu 3"
+  },
+  {
+    "name": "Thủ_tục_3",
+    "type": "legal_procedure",
+    "level": "dieu",
+    "source_id": "dieu-3",
+    "confidence_score": 0.7999999999999999,
+    "description": "Thủ tục pháp lý từ Điều 3"
+  },
+  {
+    "name": "Khái niệm_khoan_1",
+    "type": "legal_concept",
+    "level": "khoan",
+    "source_id": "khoan-1",
+    "confidence_score": 0.9,
+    "description": "Khái niệm pháp lý từ khoan 1"
+  },
+  {
+    "name": "Khái niệm_khoan_2",
+    "type": "legal_concept",
+    "level": "khoan",
+    "source_id": "khoan-2",
+    "confidence_score": 1.0,
+    "description": "Khái niệm pháp lý từ khoan 2"
+  },
+  {
+    "name": "Khái niệm_khoan_3",
+    "type": "legal_concept",
+    "level": "khoan",
+    "source_id": "khoan-3",
+    "confidence_score": 0.8,
+    "description": "Khái niệm pháp lý từ khoan 3"
+  }
+]

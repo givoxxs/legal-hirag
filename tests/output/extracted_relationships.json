@@ -1,0 +1,50 @@
+[
+  {
+    "source_entity": "Khái niệm_dieu_1",
+    "target_entity": "Thủ_tục_1",
+    "relation_type": "DEFINES",
+    "description": "Điều 1 định nghĩa thủ tục",
+    "strength": 0.8,
+    "source_id": "dieu-1"
+  },
+  {
+    "source_entity": "Khái niệm_dieu_2",
+    "target_entity": "Thủ_tục_2",
+    "relation_type": "DEFINES",
+    "description": "Điều 2 định nghĩa thủ tục",
+    "strength": 0.8,
+    "source_id": "dieu-2"
+  },
+  {
+    "source_entity": "Khái niệm_dieu_3",
+    "target_entity": "Thủ_tục_3",
+    "relation_type": "DEFINES",
+    "description": "Điều 3 định nghĩa thủ tục",
+    "strength": 0.8,
+    "source_id": "dieu-3"
+  },
+  {
+    "source_entity": "Khái niệm_phan_THỨ NHẤT",
+    "target_entity": "Khái niệm_chuong_I",
+    "relation_type": "RELATES_TO",
+    "description": "Mối quan hệ giữa Khái niệm_phan_THỨ NHẤT và Khái niệm_chuong_I",
+    "strength": 0.6,
+    "source_id": "phan-THỨ NHẤT"
+  },
+  {
+    "source_entity": "Khái niệm_chuong_I",
+    "target_entity": "Khái niệm_dieu_1",
+    "relation_type": "RELATES_TO",
+    "description": "Mối quan hệ giữa Khái niệm_chuong_I và Khái niệm_dieu_1",
+    "strength": 0.7,
+    "source_id": "chuong-I"
+  },
+  {
+    "source_entity": "Khái niệm_dieu_1",
+    "target_entity": "Thủ_tục_1",
+    "relation_type": "RELATES_TO",
+    "description": "Mối quan hệ giữa Khái niệm_dieu_1 và Thủ_tục_1",
+    "strength": 0.8,
+    "source_id": "dieu-1"
+  }
+]

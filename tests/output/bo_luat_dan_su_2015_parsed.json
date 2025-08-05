@@ -1,0 +1,474 @@
+{
+  "document_info": {
+    "id": "bo_luat_dan_su_2015",
+    "title": "﻿BỘ LUẬT DÂN SỰ 2015",
+    "document_type": "legal_code",
+    "total_provisions": 291,
+    "total_structure_elements": 95
+  },
+  "level_statistics": {
+    "phan": 1,
+    "chuong": 4,
+    "dieu": 76,
+    "khoan": 205,
+    "muc": 5
+  },
+  "sample_provisions": [
+    {
+      "id": "phan-THỨ NHẤT",
+      "level": "phan",
+      "number": "THỨ NHẤT",
+      "title": "QUY ĐỊNH CHUNG",
+      "parent_id": null,
+      "hierarchy_path": [
+        "phan-THỨ NHẤT"
+      ],
+      "content_preview": "PHẦN THỨ NHẤT: QUY ĐỊNH CHUNG"
+    },
+    {
+      "id": "chuong-I",
+      "level": "chuong",
+      "number": "I",
+      "title": "NHỮNG QUY ĐỊNH CHUNG",
+      "parent_id": "phan-THỨ NHẤT",
+      "hierarchy_path": [
+        "phan-THỨ NHẤT",
+        "chuong-I"
+      ],
+      "content_preview": "CHƯƠNG I: NHỮNG QUY ĐỊNH CHUNG"
+    },
+    {
+      "id": "dieu-1",
+      "level": "dieu",
+      "number": "1",
+      "title": "Phạm vi điều chỉnh",
+      "parent_id": "chuong-I",
+      "hierarchy_path": [
+        "phan-THỨ NHẤT",
+        "chuong-I",
+        "dieu-1"
+      ],
+      "content_preview": "Điều 1. Phạm vi điều chỉnh\nBộ luật này quy định địa vị pháp lý, chuẩn mực pháp lý về cách ứng xử của cá nhân, pháp nhân; quyền, nghĩa vụ về nhân thân và tài sản của cá nhân, pháp nhân trong các quan h..."
+    },
+    {
+      "id": "dieu-2",
+      "level": "dieu",
+      "number": "2",
+      "title": "Công nhận, tôn trọng, bảo vệ và bảo đảm quyền dân sự",
+      "parent_id": "chuong-I",
+      "hierarchy_path": [
+        "phan-THỨ NHẤT",
+        "chuong-I",
+        "dieu-2"
+      ],
+      "content_preview": "Điều 2. Công nhận, tôn trọng, bảo vệ và bảo đảm quyền dân sự"
+    },
+    {
+      "id": "khoan-1",
+      "level": "khoan",
+      "number": "1",
+      "title": "Ở nước Cộng hòa xã hội chủ nghĩa Việt Nam, các quyền dân sự được công nhận, tôn trọng, bảo vệ và bảo đảm theo Hiến pháp và pháp luật.",
+      "parent_id": "dieu-2",
+      "hierarchy_path": [
+        "phan-THỨ NHẤT",
+        "chuong-I",
+        "dieu-2",
+        "khoan-1"
+      ],
+      "content_preview": "1. Ở nước Cộng hòa xã hội chủ nghĩa Việt Nam, các quyền dân sự được công nhận, tôn trọng, bảo vệ và bảo đảm theo Hiến pháp và pháp luật."
+    },
+    {
+      "id": "khoan-2",
+      "level": "khoan",
+      "number": "2",
+      "title": "Quyền dân sự chỉ có thể bị hạn chế theo quy định của luật trong trường hợp cần thiết vì lý do quốc phòng, an ninh quốc gia, trật tự, an toàn xã hội, đạo đức xã hội, sức khỏe của cộng đồng.",
+      "parent_id": "dieu-2",
+      "hierarchy_path": [
+        "phan-THỨ NHẤT",
+        "chuong-I",
+        "dieu-2",
+        "khoan-2"
+      ],
+      "content_preview": "2. Quyền dân sự chỉ có thể bị hạn chế theo quy định của luật trong trường hợp cần thiết vì lý do quốc phòng, an ninh quốc gia, trật tự, an toàn xã hội, đạo đức xã hội, sức khỏe của cộng đồng."
+    },
+    {
+      "id": "dieu-3",
+      "level": "dieu",
+      "number": "3",
+      "title": "Các nguyên tắc cơ bản của pháp luật dân sự",
+      "parent_id": "chuong-I",
+      "hierarchy_path": [
+        "phan-THỨ NHẤT",
+        "chuong-I",
+        "dieu-3"
+      ],
+      "content_preview": "Điều 3. Các nguyên tắc cơ bản của pháp luật dân sự"
+    },
+    {
+      "id": "khoan-1",
+      "level": "khoan",
+      "number": "1",
+      "title": "Mọi cá nhân, pháp nhân đều bình đẳng, không được lấy bất kỳ lý do nào để phân biệt đối xử; được pháp luật bảo hộ như nhau về các quyền nhân thân và tài sản.",
+      "parent_id": "dieu-3",
+      "hierarchy_path": [
+        "phan-THỨ NHẤT",
+        "chuong-I",
+        "dieu-3",
+        "khoan-1"
+      ],
+      "content_preview": "1. Mọi cá nhân, pháp nhân đều bình đẳng, không được lấy bất kỳ lý do nào để phân biệt đối xử; được pháp luật bảo hộ như nhau về các quyền nhân thân và tài sản."
+    },
+    {
+      "id": "khoan-2",
+      "level": "khoan",
+      "number": "2",
+      "title": "Cá nhân, pháp nhân xác lập, thực hiện, chấm dứt quyền, nghĩa vụ dân sự của mình trên cơ sở tự do, tự nguyện cam kết, thỏa thuận. Mọi cam kết, thỏa thuận không vi phạm điều cấm của luật, không trái đạo đức xã hội có hiệu lực thực hiện đối với các bên và phải được chủ thể khác tôn trọng.",
+      "parent_id": "dieu-3",
+      "hierarchy_path": [
+        "phan-THỨ NHẤT",
+        "chuong-I",
+        "dieu-3",
+        "khoan-2"
+      ],
+      "content_preview": "2. Cá nhân, pháp nhân xác lập, thực hiện, chấm dứt quyền, nghĩa vụ dân sự của mình trên cơ sở tự do, tự nguyện cam kết, thỏa thuận. Mọi cam kết, thỏa thuận không vi phạm điều cấm của luật, không trái ..."
+    },
+    {
+      "id": "khoan-3",
+      "level": "khoan",
+      "number": "3",
+      "title": "Cá nhân, pháp nhân phải xác lập, thực hiện, chấm dứt quyền, nghĩa vụ dân sự của mình một cách thiện chí, trung thực.",
+      "parent_id": "dieu-3",
+      "hierarchy_path": [
+        "phan-THỨ NHẤT",
+        "chuong-I",
+        "dieu-3",
+        "khoan-3"
+      ],
+      "content_preview": "3. Cá nhân, pháp nhân phải xác lập, thực hiện, chấm dứt quyền, nghĩa vụ dân sự của mình một cách thiện chí, trung thực."
+    }
+  ],
+  "structure_sample": {
+    "phan-THỨ NHẤT": {
+      "id": "phan-THỨ NHẤT",
+      "level": "phan",
+      "number": "THỨ NHẤT",
+      "title": "QUY ĐỊNH CHUNG",
+      "parent_id": null,
+      "hierarchy_path": [
+        "phan-THỨ NHẤT"
+      ],
+      "children": [
+        "chuong-I",
+        "chuong-II",
+        "chuong-III",
+        "chuong-IV"
+      ]
+    },
+    "chuong-I": {
+      "id": "chuong-I",
+      "level": "chuong",
+      "number": "I",
+      "title": "NHỮNG QUY ĐỊNH CHUNG",
+      "parent_id": "phan-THỨ NHẤT",
+      "hierarchy_path": [
+        "phan-THỨ NHẤT",
+        "chuong-I"
+      ],
+      "children": [
+        "dieu-1",
+        "dieu-2",
+        "dieu-3",
+        "dieu-4",
+        "dieu-5",
+        "dieu-6",
+        "dieu-7"
+      ]
+    },
+    "dieu-1": {
+      "id": "dieu-1",
+      "level": "dieu",
+      "number": "1",
+      "title": "Phạm vi điều chỉnh",
+      "parent_id": "chuong-I",
+      "hierarchy_path": [
+        "phan-THỨ NHẤT",
+        "chuong-I",
+        "dieu-1"
+      ],
+      "children": []
+    },
+    "dieu-2": {
+      "id": "dieu-2",
+      "level": "dieu",
+      "number": "2",
+      "title": "Công nhận, tôn trọng, bảo vệ và bảo đảm quyền dân sự",
+      "parent_id": "chuong-I",
+      "hierarchy_path": [
+        "phan-THỨ NHẤT",
+        "chuong-I",
+        "dieu-2"
+      ],
+      "children": [
+        "khoan-1",
+        "khoan-2"
+      ]
+    },
+    "khoan-1": {
+      "id": "khoan-1",
+      "level": "khoan",
+      "number": "1",
+      "title": "Pháp nhân phi thương mại là pháp nhân không có mục tiêu chính là tìm kiếm lợi nhuận; nếu có lợi nhuận thì cũng không được phân chia cho các thành viên.",
+      "parent_id": "dieu-76",
+      "hierarchy_path": [
+        "phan-THỨ NHẤT",
+        "chuong-IV",
+        "dieu-76",
+        "khoan-1"
+      ],
+      "children": []
+    },
+    "khoan-2": {
+      "id": "khoan-2",
+      "level": "khoan",
+      "number": "2",
+      "title": "Pháp nhân phi thương mại bao gồm cơ quan nhà nước, đơn vị vũ trang nhân dân, tổ chức chính trị, tổ chức chính trị - xã hội, tổ chức chính trị xã hội - nghề nghiệp, tổ chức xã hội, tổ chức xã hội - nghề nghiệp, quỹ xã hội, quỹ từ thiện, doanh nghiệp xã hội và các tổ chức phi thương mại khác.",
+      "parent_id": "dieu-76",
+      "hierarchy_path": [
+        "phan-THỨ NHẤT",
+        "chuong-IV",
+        "dieu-76",
+        "khoan-2"
+      ],
+      "children": []
+    },
+    "dieu-3": {
+      "id": "dieu-3",
+      "level": "dieu",
+      "number": "3",
+      "title": "Các nguyên tắc cơ bản của pháp luật dân sự",
+      "parent_id": "chuong-I",
+      "hierarchy_path": [
+        "phan-THỨ NHẤT",
+        "chuong-I",
+        "dieu-3"
+      ],
+      "children": [
+        "khoan-1",
+        "khoan-2",
+        "khoan-3",
+        "khoan-4",
+        "khoan-5"
+      ]
+    },
+    "khoan-3": {
+      "id": "khoan-3",
+      "level": "khoan",
+      "number": "3",
+      "title": "Việc thành lập, hoạt động và chấm dứt pháp nhân phi thương mại được thực hiện theo quy định của Bộ luật này, các luật về tổ chức bộ máy nhà nước và quy định khác của pháp luật có liên quan.",
+      "parent_id": "dieu-76",
+      "hierarchy_path": [
+        "phan-THỨ NHẤT",
+        "chuong-IV",
+        "dieu-76",
+        "khoan-3"
+      ],
+      "children": []
+    },
+    "khoan-4": {
+      "id": "khoan-4",
+      "level": "khoan",
+      "number": "4",
+      "title": "Quan hệ tài sản giữa vợ và chồng được giải quyết theo quy định của Bộ luật này, Luật hôn nhân và gia đình.",
+      "parent_id": "dieu-73",
+      "hierarchy_path": [
+        "phan-THỨ NHẤT",
+        "chuong-III",
+        "muc-5",
+        "dieu-73",
+        "khoan-4"
+      ],
+      "children": []
+    },
+    "khoan-5": {
+      "id": "khoan-5",
+      "level": "khoan",
+      "number": "5",
+      "title": "Quyết định của Tòa án hủy bỏ quyết định tuyên bố một người là đã chết phải được gửi cho Ủy ban nhân dân cấp xã nơi cư trú của người bị tuyên bố là đã chết để ghi chú theo quy định của pháp luật về hộ tịch.",
+      "parent_id": "dieu-73",
+      "hierarchy_path": [
+        "phan-THỨ NHẤT",
+        "chuong-III",
+        "muc-5",
+        "dieu-73",
+        "khoan-5"
+      ],
+      "children": []
+    },
+    "dieu-4": {
+      "id": "dieu-4",
+      "level": "dieu",
+      "number": "4",
+      "title": "Áp dụng Bộ luật dân sự",
+      "parent_id": "chuong-I",
+      "hierarchy_path": [
+        "phan-THỨ NHẤT",
+        "chuong-I",
+        "dieu-4"
+      ],
+      "children": [
+        "khoan-1",
+        "khoan-2",
+        "khoan-3",
+        "khoan-4"
+      ]
+    },
+    "dieu-5": {
+      "id": "dieu-5",
+      "level": "dieu",
+      "number": "5",
+      "title": "Áp dụng tập quán",
+      "parent_id": "chuong-I",
+      "hierarchy_path": [
+        "phan-THỨ NHẤT",
+        "chuong-I",
+        "dieu-5"
+      ],
+      "children": [
+        "khoan-1",
+        "khoan-2"
+      ]
+    },
+    "dieu-6": {
+      "id": "dieu-6",
+      "level": "dieu",
+      "number": "6",
+      "title": "Áp dụng tương tự pháp luật",
+      "parent_id": "chuong-I",
+      "hierarchy_path": [
+        "phan-THỨ NHẤT",
+        "chuong-I",
+        "dieu-6"
+      ],
+      "children": [
+        "khoan-1",
+        "khoan-2"
+      ]
+    },
+    "dieu-7": {
+      "id": "dieu-7",
+      "level": "dieu",
+      "number": "7",
+      "title": "Chính sách của Nhà nước đối với quan hệ dân sự",
+      "parent_id": "chuong-I",
+      "hierarchy_path": [
+        "phan-THỨ NHẤT",
+        "chuong-I",
+        "dieu-7"
+      ],
+      "children": [
+        "khoan-1",
+        "khoan-2"
+      ]
+    },
+    "chuong-II": {
+      "id": "chuong-II",
+      "level": "chuong",
+      "number": "II",
+      "title": "XÁC LẬP, THỰC HIỆN VÀ BẢO VỆ QUYỀN DÂN SỰ",
+      "parent_id": "phan-THỨ NHẤT",
+      "hierarchy_path": [
+        "phan-THỨ NHẤT",
+        "chuong-II"
+      ],
+      "children": [
+        "dieu-8",
+        "dieu-9",
+        "dieu-10",
+        "dieu-11",
+        "dieu-12",
+        "dieu-13",
+        "dieu-14",
+        "dieu-15"
+      ]
+    },
+    "dieu-8": {
+      "id": "dieu-8",
+      "level": "dieu",
+      "number": "8",
+      "title": "Căn cứ xác lập quyền dân sự",
+      "parent_id": "chuong-II",
+      "hierarchy_path": [
+        "phan-THỨ NHẤT",
+        "chuong-II",
+        "dieu-8"
+      ],
+      "children": [
+        "khoan-1",
+        "khoan-2",
+        "khoan-3",
+        "khoan-4",
+        "khoan-5",
+        "khoan-6",
+        "khoan-7",
+        "khoan-8",
+        "khoan-9"
+      ]
+    },
+    "khoan-6": {
+      "id": "khoan-6",
+      "level": "khoan",
+      "number": "6",
+      "title": "Hủy quyết định cá biệt trái pháp luật của cơ quan, tổ chức, người có thẩm quyền;",
+      "parent_id": "dieu-11",
+      "hierarchy_path": [
+        "phan-THỨ NHẤT",
+        "chuong-II",
+        "dieu-11",
+        "khoan-6"
+      ],
+      "children": []
+    },
+    "khoan-7": {
+      "id": "khoan-7",
+      "level": "khoan",
+      "number": "7",
+      "title": "Yêu cầu khác theo quy định của luật.",
+      "parent_id": "dieu-11",
+      "hierarchy_path": [
+        "phan-THỨ NHẤT",
+        "chuong-II",
+        "dieu-11",
+        "khoan-7"
+      ],
+      "children": []
+    },
+    "khoan-8": {
+      "id": "khoan-8",
+      "level": "khoan",
+      "number": "8",
+      "title": "Thực hiện công việc không có uỷ quyền;",
+      "parent_id": "dieu-8",
+      "hierarchy_path": [
+        "phan-THỨ NHẤT",
+        "chuong-II",
+        "dieu-8",
+        "khoan-8"
+      ],
+      "children": []
+    },
+    "khoan-9": {
+      "id": "khoan-9",
+      "level": "khoan",
+      "number": "9",
+      "title": "Căn cứ khác do pháp luật quy định.",
+      "parent_id": "dieu-8",
+      "hierarchy_path": [
+        "phan-THỨ NHẤT",
+        "chuong-II",
+        "dieu-8",
+        "khoan-9"
+      ],
+      "children": []
+    }
+  }
+}

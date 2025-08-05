@@ -1,5 +1,6 @@
 import asyncpg
 import json
+from urllib.parse import quote_plus
 from typing import Dict, List, Optional, Any
 from ..models.legal_schemas import LegalDocument, LegalProvision
 
@@ -9,8 +10,9 @@ class PostgresAdapter:
 
     def __init__(self, config: Dict[str, Any]):
         self.config = config
+        password_encoded = quote_plus(config["password"])
         self.connection_string = (
-            f"postgresql://{config['user']}:{config['password']}"
+            f"postgresql://{config['user']}:{password_encoded}"
             f"@{config['host']}:{config['port']}"
             f"/{config['database']}"
         )
@@ -40,7 +42,7 @@ class PostgresAdapter:
 
         except Exception as e:
             print(f"Error storing document metadata: {e}")
-            return False
+            raise e  # Re-raise để storage_manager biết có lỗi
 
     async def store_provision(self, provision: LegalProvision) -> bool:
         """Store provision metadata"""

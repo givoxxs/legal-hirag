@@ -26,6 +26,11 @@ class LegalDocumentParser:
     def parse_document(self, text: str, document_id: str) -> LegalDocument:
         """Parse legal document text into structured format"""
         provisions = self._extract_provisions(text)
+
+        # Gán document_id cho tất cả provisions
+        for provision in provisions:
+            provision.document_id = document_id
+
         structure = self._build_hierarchy(provisions)
 
         return LegalDocument(

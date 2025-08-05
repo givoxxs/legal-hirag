@@ -1,6 +1,8 @@
 from typing import Dict, List, Any, Optional
 import re
 import asyncio
+from pprint import pprint
+import asyncpg
 from ..models.query_models import LegalQueryParam
 from ..storage.storage_manager import LegalStorageManager
 
@@ -133,8 +135,14 @@ class LegalContextBuilder:
 
         # Combine local, global, and bridge contexts
         local_context = await self.build_local_context(query, params)
+        print("local context")
+        pprint(local_context)
         global_context = await self.build_global_context(query, params)
+        print("global context")
+        pprint(global_context)
         bridge_context = await self.build_bridge_context(query, params)
+        print("bridge context")
+        pprint(bridge_context)
 
         # Merge and deduplicate entities
         all_entities = local_context["entities"] + global_context["entities"][:3]
@@ -197,7 +205,8 @@ class LegalContextBuilder:
         try:
             # Search through all documents for provisions containing the entity
             # This is a simplified implementation - in practice, you'd use full-text search
-            all_documents = await self.storage.postgres.conn.fetch(
+            conn = await asyncpg.connect(self.storage.postgres.connection_string)
+            all_documents = await conn.fetch(
                 "SELECT DISTINCT document_id FROM legal_chunks"
             )
 
@@ -210,6 +219,7 @@ class LegalContextBuilder:
                     if entity_name.lower() in provision.get("content", "").lower():
                         provisions.append(provision)
 
+            await conn.close()
             return provisions[:5]  # Limit results
 
         except Exception as e:
@@ -370,7 +380,8 @@ class LegalContextBuilder:
                     """  
                     MATCH (e1:LegalEntity)-[r]->(e2:LegalEntity)  
                     WHERE e1.name IN $names AND e2.name IN $names  
-                    RETURN e1.name as source, e2.name as target, type(r) as relation_type, r.description as description  
+                    RETURN e1.name as source, e2.name as target, type(r) as relation_type, 
+                           COALESCE(r.description, 'No description available') as description  
                 """,
                     names=entity_names,
                 )
@@ -564,8 +575,8 @@ class LegalContextBuilder:
                     """  
                     MATCH (e1:LegalEntity {name: $entity1})-[r1]->(intermediate:LegalEntity)-[r2]->(e2:LegalEntity {name: $entity2})  
                     RETURN intermediate.name as intermediate_entity,   
-                           type(r1) as relation1_type, r1.description as relation1_desc,  
-                           type(r2) as relation2_type, r2.description as relation2_desc  
+                           type(r1) as relation1_type, COALESCE(r1.description, 'No description') as relation1_desc,  
+                           type(r2) as relation2_type, COALESCE(r2.description, 'No description') as relation2_desc  
                     LIMIT 5  
                 """,
                     entity1=entity1,

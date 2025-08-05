@@ -10,7 +10,7 @@ from pathlib import Path
 # Add project root to path
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
-from src.legal_hirag.utils.config import load_config
+from src.utils.config import load_config
 
 
 async def setup_postgresql(config):

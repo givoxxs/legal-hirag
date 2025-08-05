@@ -3,6 +3,9 @@ import os
 from pathlib import Path
 from typing import Dict, Any
 from ..models.config_models import LegalConfig
+from dotenv import load_dotenv
+
+load_dotenv()
 
 
 def load_config(config_path: str = "src/config/legal_config.yaml") -> Dict[str, Any]:
@@ -30,7 +33,8 @@ def _substitute_env_vars(content: str) -> str:
 
     def replace_env_var(match):
         var_name = match.group(1)
-        return os.getenv(var_name, f"${{{var_name}}}")  # Keep original if not found
+        res = os.getenv(var_name, f"${{{var_name}}}")  # Keep original if not found
+        return res
 
     # Replace ${VAR_NAME} patterns
     return re.sub(r"\$\{([^}]+)\}", replace_env_var, content)

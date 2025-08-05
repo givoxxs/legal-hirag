@@ -3,6 +3,7 @@ import asyncio
 from ..models.legal_schemas import (
     LegalDocument,
     LegalEntity,
+    LegalLevel,
     LegalRelationship,
     LegalEntityType,
     LegalRelationType,
@@ -23,8 +24,16 @@ class LegalEntityExtractor:
             "legal_provision",
         ]
 
+        self.entity_types_description = {
+            "legal_concept": "Khái niệm pháp lý",
+            "legal_principle": "Nguyên tắc pháp lý",
+            "legal_entity": "Chủ thể pháp lý",
+            "legal_procedure": "Thủ tục pháp lý",
+            "legal_provision": "Điều khoản pháp luật",
+        }
+
         # Legal-specific prompts
-        self.entity_prompt = """  
+        self.entity_prompt_system = """  
 Bạn là chuyên gia pháp luật. Từ văn bản pháp luật sau, hãy trích xuất:  
   
 1. CÁC THỰC THỂ PHÁP LÝ với thông tin:  
@@ -38,11 +47,12 @@ Bạn là chuyên gia pháp luật. Từ văn bản pháp luật sau, hãy tríc
     - relationship_description: Mô tả mối quan hệ  
     - relationship_strength: Điểm số từ 0.0 đến 1.0  
   
-Văn bản: {text}  
-  
 Trả về kết quả theo format:  
 ("entity"<|>entity_name<|>entity_type<|>entity_description)  
 ("relationship"<|>source_entity<|>target_entity<|>relationship_description<|>relationship_strength)  
+"""
+        self.entity_prompt_user = """
+Văn bản: {text}        
 """
 
     async def extract_from_document(
@@ -69,41 +79,56 @@ Trả về kết quả theo format:
     ) -> Tuple[List[LegalEntity], List[LegalRelationship]]:
         """Extract entities and relationships from a single provision"""
 
-        # Prepare prompt
-        prompt = self.entity_prompt.format(
-            entity_types=", ".join(self.entity_types), text=provision.content
-        )
+        entity_types_description = ""
 
-        # Call LLM (simplified - you'd implement actual LLM call)
+        for k, v in self.entity_types_description.items():
+            entity_types_description += f"{k}: {v}\n"
+
+        prompt = [
+            {
+                "role": "system",
+                "content": self.entity_prompt_system.format(
+                    entity_types=entity_types_description
+                ),
+            },
+            {
+                "role": "user",
+                "content": self.entity_prompt_user.format(text=provision.content),
+            },
+        ]
+
         response = await self._call_llm(prompt)
 
         # Parse response
         entities, relationships = self._parse_extraction_response(
-            response, provision.id
+            response, provision.id, provision.level
         )
 
         return entities, relationships
 
     async def _call_llm(self, prompt: str) -> str:
         """Call LLM API - implement based on your chosen LLM"""
-        try:
-            response = completion(
-                model="gemini/gemini-2.0-flash",
-                messages=[
-                    {
-                        "role": "system",
-                        "content": "Bạn là chuyên gia pháp luật. Từ văn bản pháp luật sau, hãy trích xuất các thực thể pháp lý và mối quan hệ giữa các thực thể.",
-                    },
-                    {"role": "user", "content": prompt},
-                ],
-                api_key=self.llm_config.get("gemini").get("api_key"),
-            )
-            return response.choices[0].message.content
-        except Exception as e:
-            return f"Lỗi LiteLLM: {str(e)}"
+        max_retries = 3
+        retry_count = 0
+
+        while retry_count < max_retries:
+            try:
+                response = completion(
+                    model="gemini/gemini-2.0-flash",
+                    messages=prompt,
+                    api_key=self.llm_config.get("gemini").get("api_key"),
+                )
+                return response.choices[0].message.content
+
+            except Exception as e:
+                retry_count += 1
+                if retry_count == max_retries:
+                    return f"Lỗi LiteLLM sau {max_retries} lần thử: {str(e)}"
+                print(f"Lần thử {retry_count} thất bại, đang thử lại...")
+                await asyncio.sleep(1)  # Chờ 1 giây trước khi thử lại
 
     def _parse_extraction_response(
-        self, response: str, source_id: str
+        self, response: str, source_id: str, level: LegalLevel
     ) -> Tuple[List[LegalEntity], List[LegalRelationship]]:
         """Parse LLM response to extract entities and relationships"""
         entities = []
@@ -116,7 +141,7 @@ Trả về kết quả theo format:
                 continue
 
             if line.startswith('("entity"'):
-                entity = self._parse_entity_line(line, source_id)
+                entity = self._parse_entity_line(line, source_id, level)
                 if entity:
                     entities.append(entity)
             elif line.startswith('("relationship"'):
@@ -126,7 +151,9 @@ Trả về kết quả theo format:
 
         return entities, relationships
 
-    def _parse_entity_line(self, line: str, source_id: str) -> LegalEntity:
+    def _parse_entity_line(
+        self, line: str, source_id: str, level: LegalLevel
+    ) -> LegalEntity:
         """Parse entity line from LLM response"""
         try:
             # Extract content between parentheses
@@ -136,10 +163,13 @@ Trả về kết quả theo format:
             if len(parts) >= 4:
                 return LegalEntity(
                     name=parts[1].strip(),
-                    type=LegalEntityType(parts[2].strip()),
+                    type=LegalEntityType(
+                        parts[2].strip().lower().replace("'", "").replace('"', "")
+                    ),
                     description=parts[3].strip(),
                     source_id=source_id,
                     confidence_score=0.8,
+                    level=level,
                 )
         except Exception as e:
             print(f"Error parsing entity line: {line}, error: {e}")
